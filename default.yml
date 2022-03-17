@@ -1,0 +1,17 @@
+---
+create_user: kevit
+root_user: ubuntu
+copy_local_key: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+sys_packages: 'curl,vim,ufw,git,wget,build-essential,libssl-dev,unzip,python3,nginx,nodejs,aptitude,mongodb-org'
+NODEJS_VERSION: "16.x"
+ansible_distribution_release: "focal"
+http_host: "project_host"
+http_conf: "project_name.conf"
+ssh_port: "9834"
+aws_system_user: root
+aws_profile: default
+aws_region: ap-south-1
+aws_format: table
+project_path: /opt/kevit/ssh-iam-sync/index.js
+ssh_iam_sync_path: /opt/ssh-iam-sync
+authorized_keys: /home/ubuntu/.ssh/authorized_keys
